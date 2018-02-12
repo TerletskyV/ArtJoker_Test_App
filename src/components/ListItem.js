@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
-import ListItem from 'material-ui/List/ListItem'
+import ListItem from 'material-ui/List/ListItem';
+import CloseIcon from 'material-ui-icons/Close';
 
 import ModalSelectField from './ModalSelectField';
 
@@ -24,7 +25,7 @@ class ModalListItem extends Component {
             marginLeft: 20
         },
         cross: {
-            color: '#F44336'
+            fill: '#F44336'
         }
     }
 
@@ -59,9 +60,10 @@ class ModalListItem extends Component {
                     <FloatingActionButton
                         mini={true}
                         style={this.styles.button}
+                        iconStyle={this.styles.cross}
                         backgroundColor="#FBE6E9"
                         onClick={() => this.props.deleteItem(this.props.item.id)}>
-                        <i className="material-icons" style={this.styles.cross}>close</i>
+                        <CloseIcon />
                     </FloatingActionButton>
                 </div>
             </ListItem>

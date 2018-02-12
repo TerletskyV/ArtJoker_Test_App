@@ -61,7 +61,7 @@ class FabModal extends Component {
         const actions = [
             <RaisedButton
                 label="Save"
-                primary={true}
+                primary
                 onClick={() => this.props.handleSave(this.state.items)}
             />,
             <RaisedButton

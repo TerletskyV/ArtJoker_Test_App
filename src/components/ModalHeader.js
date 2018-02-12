@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardHeader } from 'material-ui/Card';
+import CloseIcon from 'material-ui-icons/Close';
 
 const styles = {
     cardColor: {
@@ -12,7 +13,7 @@ const Header = (props) => (
         <CardHeader
             title="Структура номеров"
             style={styles.cardColor}
-            closeIcon={<i onClick={props.handleClose} className="material-icons">close</i>}
+            closeIcon={<i onClick={props.handleClose}><CloseIcon /></i>}
             showExpandableButton
         />
     </Card>
